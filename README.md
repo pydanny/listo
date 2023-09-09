@@ -22,7 +22,7 @@ python -m build
 Test the project, forcing reinstall if necessary
 
 ```bash
-pip install dist/listplus-0.1.0-py3-none-any.whl --force-reinstall
+pip install dist/listo-0.1.0-py3-none-any.whl --force-reinstall
 ```
 
 ## Uploading releases to PyPI
