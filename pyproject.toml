@@ -20,10 +20,6 @@ license = {text = "MIT"}
 
 [project.urls]
 
-homepage = "https://github.com/pydanny/listo"
-
-repository = "https://github.com/pydanny/listo.git"
-changelog = "https://github.com/pydanny/listo/blob/master/CHANGELOG.md"
 bugs = "https://github.com/pydanny/listo/issues"
-
-
+changelog = "https://github.com/pydanny/listo/blob/master/CHANGELOG.md"
+homepage = "https://github.com/pydanny/listo"
