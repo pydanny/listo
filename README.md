@@ -6,7 +6,7 @@ Description and usage coming soon
 
 ```bash 
 black .
-ruff check .
+ruff check . --fix
 ```
 
 
@@ -29,5 +29,5 @@ pip install dist/listo-0.1.0-py3-none-any.whl --force-reinstall
 
 ```bash
 pip install --upgrade twine
-python -m twine upload --repository testpypi dist/*
+python -m twine upload  dist/*
 ```
