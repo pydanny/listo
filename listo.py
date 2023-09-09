@@ -50,22 +50,3 @@ class Listo(list):
 
 
 listo = Listo
-
-if __name__ == "__main__":
-    lst = listo(1, 2, 3, 4)
-    print(lst.first())
-    print(lst.last())
-    print(lst.min())
-    print("random", lst.random())
-    print("median", lst.median())
-    print("Join", lst.join("-"))
-    print("shuffle", lst.shuffle())
-
-    lst2 = listo("two", "one", "three", "four")
-    print("random2", lst2.random())
-    print("median2", lst2.median())
-    print("join2", lst2.join("+"))
-    print("shuffle", lst2.shuffle())
-
-    print("type", type(lst))
-    print("type", type(lst2))
