@@ -162,4 +162,3 @@ cython_debug/
 .hypothesis/
 .vscode/
 .ruff_cache/
-changelog.json
