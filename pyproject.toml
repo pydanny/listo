@@ -23,3 +23,6 @@ license = {text = "MIT"}
 bugs = "https://github.com/pydanny/listo/issues"
 changelog = "https://github.com/pydanny/listo/blob/master/CHANGELOG.md"
 homepage = "https://github.com/pydanny/listo"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
