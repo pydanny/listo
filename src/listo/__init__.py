@@ -28,7 +28,7 @@ class Listo(list):
     def max(self):
         return max(self)
 
-    def random(self):
+    def random_choice(self):
         return random.choice(self)
 
     @functools.cached_property
@@ -36,7 +36,7 @@ class Listo(list):
         return len(self)
 
     def len(self):
-        return self.length
+        return self._length
 
     def median(self):
         index = round((self._length - 1) / 2)
