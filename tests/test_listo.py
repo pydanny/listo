@@ -55,3 +55,18 @@ def test_unpacking_of_single_tuple_arg():
 def test_assignment_of_multiple_iterator_args():
     lst = listo([1, 2, 3], (4, 5, 6))
     assert lst == [[1, 2, 3], (4, 5, 6)]
+
+
+def test_len():
+    lst = listo(1, 2, 3, 4)
+    assert lst.len() == 4
+
+
+def test_reverse():
+    lst = listo(range(10))
+    assert lst.reverse() == list(range(9, -1, -1))
+
+
+def test_random_choice():
+    lst = listo(range(10))
+    assert lst.random_choice() in lst
