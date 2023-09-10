@@ -40,3 +40,18 @@ def test_type():
     lst = listo(1, 2, 3, 4)
     assert isinstance(lst, list)
     assert isinstance(lst, listo)
+
+
+def test_unpacking_of_single_list_arg():
+    lst = listo([1, 2, 3, 4])
+    assert lst == [1, 2, 3, 4]
+
+
+def test_unpacking_of_single_tuple_arg():
+    lst = listo((1, 2, 3, 4))
+    assert lst == [1, 2, 3, 4]
+
+
+def test_assignment_of_multiple_iterator_args():
+    lst = listo([1, 2, 3], (4, 5, 6))
+    assert lst == [[1, 2, 3], (4, 5, 6)]

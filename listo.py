@@ -1,3 +1,4 @@
+import collections
 import functools
 import random
 
@@ -10,6 +11,9 @@ class Listo(list):
     """
 
     def __init__(self, *args):
+        # If the first argument is an iterable, unpack it
+        if len(args) == 1 and isinstance(args[0], collections.abc.Iterable):
+            args = args[0]
         self.extend(list(args))
 
     def first(self):
