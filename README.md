@@ -2,15 +2,28 @@
 
 Description and usage coming soon
 
-## Code quality stuff
+## Maintenance  
+
+### Code quality
 
 ```bash 
-black .
-ruff check . --fix
+make lint
 ```
 
+### Testing
 
-## Building the project
+```bash
+make test
+```
+
+### Releasing on PyPI
+
+1. Update the `version` in `pyproject.toml`. We use semantic versioning
+2. At the command line, run `make tag`
+3. Go to [releases page](https://github.com/pydanny/listo/releases) and click `Draft a new release`
+
+
+### Building the project locally
 
 Go to the project root
 
@@ -25,9 +38,3 @@ Test the project, forcing reinstall if necessary
 pip install dist/listo-0.1.0-py3-none-any.whl --force-reinstall
 ```
 
-## Uploading releases to PyPI
-
-```bash
-pip install --upgrade twine
-python -m twine upload  dist/*
-```
