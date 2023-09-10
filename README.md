@@ -74,7 +74,7 @@ make test
 
 1. Update the `version` in `pyproject.toml`. We use semantic versioning
 2. At the command line, run `make tag`
-3. Go to [releases page](https://github.com/pydanny/listo/releases) and click `Draft a new release`
+3. Go to [tags page](https://github.com/pydanny/listo/tags), choose the most recent tag, and click `Draft a new release`
 
 
 ### Building the project locally
