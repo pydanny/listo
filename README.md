@@ -44,7 +44,19 @@ assert lst4 == [[1, 2, 3], (1, 2)]
 
 This is different from standard Python iterator behavior.
 
-## Maintenance  
+## Development
+
+Install dev dependencies:
+
+```
+pip install -r requirements-dev.txt
+```
+
+Install the package in editable mode:
+
+```bash
+pip install -e .
+```
 
 ### Code quality
 
