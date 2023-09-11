@@ -46,16 +46,10 @@ This is different from standard Python iterator behavior.
 
 ## Development
 
-Install dev dependencies:
-
-```
-pip install -r requirements-dev.txt
-```
-
-Install the package in editable mode:
+Install the package in editable mode with test dependencies:
 
 ```bash
-pip install -e .
+pip install -e '.[test]'
 ```
 
 ### Code quality
