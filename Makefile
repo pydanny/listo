@@ -47,6 +47,7 @@ test: ## Test code with coverage and pytest
 	coverage run -m pytest .
 	coverage report -m
 	coverage html
+
 # Define target for tagging version
 VERSION=$(shell grep -m 1 version pyproject.toml | tr -s ' ' | tr -d '"' | tr -d "'" | cut -d' ' -f3)
 tag: ## Tag version with git
