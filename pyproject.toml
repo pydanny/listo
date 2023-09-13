@@ -1,6 +1,12 @@
+# Build system
+# ------------
+
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
+# Main project table
+# ------------------
 
 [project]
 name = "listo"
@@ -20,13 +26,28 @@ license = {text = "MIT"}
 
 # PyPI sidebar URLs
 # -----------------
+
 [project.urls]
 bugs = "https://github.com/pydanny/listo/issues"
 changelog = "https://github.com/pydanny/listo/blob/master/CHANGELOG.md"
 homepage = "https://github.com/pydanny/listo"
 
+# Optional dependencies
+# ---------------------
+
+[project.optional-dependencies]
+test = [
+    "black",  # code auto-formatting
+    "coverage",  # testing
+    "isort",  # code auto-formatting
+    "mypy",  # linting
+    "pytest",  # testing
+    "ruff"  # linting
+]
+
 # Where is my code
 # ----------------
+
 [tool.setuptools]
 package-dir = {"" = "src"}
 
