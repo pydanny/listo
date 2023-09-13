@@ -1,9 +1,12 @@
-import pathlib
 import json
+import pathlib
+import typing
 
 
-def main():
-    changes: str = json.loads(pathlib.Path("changelog.json").read_text())
+def main() -> None:
+    changes: dict[str, typing.Any] = json.loads(
+        pathlib.Path("changelog.json").read_text()
+    )
     previous_changelog: str = pathlib.Path("CHANGELOG.md").read_text()
 
     new_changelog: str = f"""

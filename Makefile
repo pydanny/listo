@@ -37,6 +37,7 @@ changelog:  ## Fetches the changelog from the latest release. Requires GH CLI
 lint: ## Lint code with black and ruff
 	black .
 	ruff check . --fix
+	mypy
 
 # Define target for testing code
 test: ## Test code with coverage and pytest
