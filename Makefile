@@ -54,6 +54,7 @@ tag: ## Tag version with git
 	echo "Tagging version $(VERSION)"
 	git tag -a $(VERSION) -m "Creating version $(VERSION)"
 	git push origin $(VERSION)
+
 # Define phony target for executing all targets
 all: changelog lint test tag ## Execute all targets
 # Define phony target for cleaning up files
