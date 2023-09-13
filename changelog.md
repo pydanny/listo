@@ -1,3 +1,21 @@
+
+# [0.4.1](https://github.com/pydanny/listo/releases/tag/0.4.1)
+
+2023-09-13T05:53:55Z by
+[@pydanny](https://github.com/pydanny)
+
+## ## What's Changed
+* Fetch release notes and give message by @pydanny in https://github.com/pydanny/listo/pull/22
+* Modernize package dependencies by @pydanny in https://github.com/pydanny/listo/pull/23
+* Add missing optional dependencies by @pydanny in https://github.com/pydanny/listo/pull/25
+* fix flaky shuffle test by @pydanny in https://github.com/pydanny/listo/pull/26
+* Release bugfix 0.4.1 by @pydanny in https://github.com/pydanny/listo/pull/27
+
+
+**Full Changelog**: https://github.com/pydanny/listo/compare/0.4.0...0.4.1
+
+---
+
 # 0.4.0 (2023-09-10)
 ## What's Changed
 * Switch to src-based architecture by @pydanny in https://github.com/pydanny/listo/pull/17
@@ -9,6 +27,9 @@
 
 **Full Changelog**: https://github.com/pydanny/listo/compare/0.3.0...0.4.0
 
+---
+
 # 0.1.0 (2023-09-09)
 
 - Initial release
+
