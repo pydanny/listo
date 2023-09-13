@@ -36,6 +36,7 @@ changelog:  ## Install gh cli and jq first
   $(GH_API) > changelog.json
 	$(JQ) '.tag_name' changelog.json
 	$(JQ) '.body' changelog.json
+
 # Define target for linting code
 lint: ## Lint code with black and ruff
 	black .
