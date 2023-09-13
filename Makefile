@@ -28,6 +28,7 @@ GH_API = https://api.github.com/repos/pydanny/listo/releases/latest
 # Define variable for jq command
 JQ = jq -r
 # Define target for generating changelog
+
 changelog:  ## Install gh cli and jq first
 	gh api \
   -H "Accept: application/vnd.github+json" \
