@@ -41,6 +41,7 @@ changelog:  ## Install gh cli and jq first
 lint: ## Lint code with black and ruff
 	black .
 	ruff check . --fix
+
 # Define target for testing code
 test: ## Test code with coverage and pytest
 	coverage run -m pytest .
