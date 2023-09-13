@@ -32,7 +32,7 @@ def test_join():
 
 
 def test_shuffle():
-    lst = listo(1, 2, 3, 4)
+    lst = listo(range(100))
     assert lst.shuffle() != lst
 
 
