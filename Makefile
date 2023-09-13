@@ -23,19 +23,15 @@ export PRINT_HELP_PYSCRIPT # End of python section
 # Define target for printing help message
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
-# Define variable for GitHub API URL
-GH_API = https://api.github.com/repos/pydanny/listo/releases/latest
-# Define variable for jq command
-JQ = jq -r
-# Define target for generating changelog
 
-changelog:  ## Install gh cli and jq first
+# Define target for building the changelog
+changelog:  ## Fetches the changelog from the latest release. Requires GH CLI
 	gh api \
   -H "Accept: application/vnd.github+json" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  $(GH_API) > changelog.json
-	$(JQ) '.tag_name' changelog.json
-	$(JQ) '.body' changelog.json
+  /repos/pydanny/listo/releases/latest > changelog.json
+	python utils/update_changelog.py
+	rm changelog.json
 
 # Define target for linting code
 lint: ## Lint code with black and ruff
