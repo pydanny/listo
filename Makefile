@@ -19,6 +19,7 @@ output.sort()
 print('\n'.join(output))
 endef
 export PRINT_HELP_PYSCRIPT # End of python section
+
 # Define target for printing help message
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
