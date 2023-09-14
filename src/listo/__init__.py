@@ -31,28 +31,36 @@ class Listo(list):  # type: ignore [type-arg]
         return max(self)
 
     def random_choice(self) -> typing.Any:
+        # Randomly returns a value from the listo
         return random.choice(self)
 
     @functools.cached_property
     def _length(self) -> int:
+        # Returns caached length of the listo
         return len(self)
 
     def len(self) -> int:
+        # Returns the length of the listo
         return self._length
 
     def median(self) -> typing.Any:
+        # Provides the median value, rounding up
         index = round((self._length - 1) / 2)
         return self[index]
 
     def join(self, seperator: str = " ") -> str:
+        # Replicates str.join()
         return seperator.join([str(x) for x in self])
 
     def shuffle(self) -> list[typing.Any]:
+        # Shuffles and resits the listo
         return random.sample(self, self._length)
 
     def reverse(self) -> typing.Any:
-        # Overwrite the built-in reverse method so a value is returned
+        # Overwrites the built-in reverse method so a value is returned
         return self[::-1]
+
+    reverse.__doc__ = "Overwrites the built-in reverse method so a value is returned"
 
 
 listo = Listo
