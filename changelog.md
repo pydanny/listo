@@ -1,4 +1,24 @@
 
+# [0.5.0](https://github.com/pydanny/listo/releases/tag/0.5.0)
+
+2023-09-14T07:57:19Z by
+[@pydanny](https://github.com/pydanny)
+
+## ## What's Changed
+* updated Makefile by @dysai1234 in https://github.com/pydanny/listo/pull/24
+* Fetch release notes and add to changelog by @pydanny in https://github.com/pydanny/listo/pull/28
+* Remove Python 3.8 from supported versions by @pydanny in https://github.com/pydanny/listo/pull/31
+* Add mypy and types by @pydanny in https://github.com/pydanny/listo/pull/29
+* Release v0.5.0 by @pydanny in https://github.com/pydanny/listo/pull/32
+
+## New Contributors
+* @dysai1234 made their first contribution in https://github.com/pydanny/listo/pull/24
+
+**Full Changelog**: https://github.com/pydanny/listo/compare/0.4.1...0.5.0
+
+---
+
+
 # [0.4.1](https://github.com/pydanny/listo/releases/tag/0.4.1)
 
 2023-09-13T05:53:55Z by
@@ -32,4 +52,5 @@
 # 0.1.0 (2023-09-09)
 
 - Initial release
+
 
