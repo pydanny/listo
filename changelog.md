@@ -1,4 +1,25 @@
 
+# [0.6.0](https://github.com/pydanny/listo/releases/tag/0.6.0)
+
+2023-09-17T10:29:54Z by
+[@pydanny](https://github.com/pydanny)
+
+## ## What's Changed
+* Improve docstrings by @pydanny in https://github.com/pydanny/listo/pull/33
+* Update release notes instructions by @pydanny in https://github.com/pydanny/listo/pull/34
+* Move code to main module by @pydanny in https://github.com/pydanny/listo/pull/35
+* Add classifiers by @pydanny in https://github.com/pydanny/listo/pull/36
+* Break out instructions for new contributors by @audreyfeldroy in https://github.com/pydanny/listo/pull/38
+* Update pyproject.toml by @pydanny in https://github.com/pydanny/listo/pull/40
+
+## New Contributors
+* @audreyfeldroy made their first contribution in https://github.com/pydanny/listo/pull/38
+
+**Full Changelog**: https://github.com/pydanny/listo/compare/0.5.0...0.6.0
+
+---
+
+
 # [0.5.0](https://github.com/pydanny/listo/releases/tag/0.5.0)
 
 2023-09-14T07:57:19Z by
@@ -52,5 +73,6 @@
 # 0.1.0 (2023-09-09)
 
 - Initial release
+
 
 
