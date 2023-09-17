@@ -11,7 +11,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "listo"
 version = "0.6.0"
-description = "An improved version of the List type"
+description = "An improved version of the List built-in"
 readme = "README.md"
 authors = [
   {name = "Daniel Roy Greenfeld", email = "daniel@feldroy.com"}
