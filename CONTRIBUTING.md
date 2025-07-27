@@ -57,7 +57,9 @@ Tag the release and push to github:
 make tag
 ```
 
-This will deploy the new package to PyPI. Once confirmed the new package has been found on GitHub.
+This will deploy the new package to PyPI. 
+
+Check https://pypi.org/project/listo and confirm that the new version number shows there.
 
 Finally, create a new release on GitHub:
 
