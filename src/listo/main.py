@@ -84,7 +84,9 @@ class Listo(list):  # type: ignore [type-arg]
     reverse.__doc__ = "Overwrites the built-in reverse method so a value is returned"
 
     def __repr__(self):
-        return 'I am a listo'
+        if self._length <= 6:
+            return f"{self._length} items: {self}"
+        return f"{self._length} items: {self[:5], ..., self[-1]}"
 
 
 listo = Listo

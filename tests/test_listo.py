@@ -85,3 +85,10 @@ def test_filter():
 def test_unique():
     lst = listo(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
     assert lst.unique() == [1, 2, 3, 4]
+
+
+# def test_repr():
+#     lst = list(range(6))
+#     assert lst.__repr__() == "[0, 1, 2, 3, 4, 5]"
+#     lst = list(range(7))
+#     assert lst.__repr__() == [0, 1, 2, 3, 4, 5]
