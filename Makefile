@@ -42,9 +42,9 @@ test: ## Test code with coverage and pytest
 # Define target for tagging version
 VERSION=$(shell grep -m 1 version pyproject.toml | tr -s ' ' | tr -d '"' | tr -d "'" | cut -d' ' -f3)
 tag: ## Tag version with git
-	echo "Tagging version $(VERSION)"
-	git tag -a $(VERSION) -m "Creating version $(VERSION)"
-	git push origin $(VERSION)
+	echo "Tagging version v$(VERSION)"
+	git tag -a v$(VERSION) -m "Creating version v$(VERSION)"
+	git push origin v$(VERSION)
 
 
 # Define phony target for cleaning up files
