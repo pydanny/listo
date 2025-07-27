@@ -34,10 +34,12 @@ changelog:  ## Fetches the changelog from the latest release. Requires GH CLI
 	rm changelog.json
 
 # Define target for linting code
-lint: ## Lint code with black and ruff
-	black .
-	ruff check . --fix
-	mypy
+qa: ## Lint code with black and ruff
+	uv run --extra test ruff check . --fix
+	uv run --extra test ruff check --select I --fix .
+	uv run --extra test ruff format .
+	uv run --extra test ty check .
+	uv run --extra test pytest .
 
 # Define target for testing code
 test: ## Test code with coverage and pytest

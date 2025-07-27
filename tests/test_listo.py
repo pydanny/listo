@@ -70,3 +70,18 @@ def test_reverse():
 def test_random_choice():
     lst = listo(range(10))
     assert lst.random_choice() in lst
+
+
+def test_map():
+    lst = listo(["a", "b", "c"])
+    assert lst.map(lambda x: x.upper()) == ["A", "B", "C"]
+
+
+def test_filter():
+    lst = listo(range(10))
+    assert lst.filter(lambda x: x % 3) == [1, 2, 4, 5, 7, 8]
+
+
+def test_unique():
+    lst = listo(1, 2, 2, 3, 3, 3, 4, 4, 4, 4)
+    assert lst.unique() == [1, 2, 3, 4]

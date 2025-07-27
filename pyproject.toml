@@ -1,10 +1,3 @@
-# Build system
-# ------------
-
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
-
 # Main project table
 # ------------------
 
@@ -13,19 +6,24 @@ name = "listo"
 version = "0.6.0"
 description = "An improved version of the List built-in"
 readme = "README.md"
+requires-python = ">= 3.10"
 authors = [
-  {name = "Daniel Roy Greenfeld", email = "daniel@feldroy.com"}
+  {name = "Daniel Roy Greenfeld", email = "daniel@feldroy.com"},
+  {name = "Audrey M. Roy Greenfeld", email = "audrey@feldroy.com"}
 ]
 maintainers = [
-  {name = "Daniel Roy Greenfeld", email = "daniel@feldroy.com"}
+  {name = "Daniel Roy Greenfeld", email = "daniel@feldroy.com"},
+  {name = "Audrey M. Roy Greenfeld", email = "audrey@feldroy.com"}
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: MIT License",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11"
+  "Programming Language :: Python :: 3.11",  
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+
 ]
 license = {text = "MIT"}
 
@@ -42,28 +40,18 @@ homepage = "https://github.com/pydanny/listo"
 
 [project.optional-dependencies]
 test = [
-    "black",  # code auto-formatting
     "coverage",  # testing
-    "isort",  # code auto-formatting
-    "mypy",  # linting
     "pytest",  # testing
-    "ruff"  # linting
+    "ruff",  # linting
+    "ty",  # type checking    
 ]
 
 # Where is my code
 # ----------------
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+# [tool.setuptools]
+# package-dir = {"" = "src"}
 
-# Isort
-# -----
-
-[tool.isort]
-line_length = 99
-profile = "black"
-default_section = "THIRDPARTY"
-lines_after_imports = 2
 
 # Mypy
 # ----
@@ -81,3 +69,7 @@ warn_no_return = true
 module = "tests.*"
 allow_untyped_defs = true
 disable_error_code = "attr-defined"
+
+
+[tool.uv]
+package = true
