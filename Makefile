@@ -24,14 +24,6 @@ export PRINT_HELP_PYSCRIPT # End of python section
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-# Define target for building the changelog
-changelog:  ## Fetches the changelog from the latest release. Requires GH CLI
-	gh api \
-  -H "Accept: application/vnd.github+json" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  /repos/pydanny/listo/releases/latest > changelog.json
-	python utils/update_changelog.py
-	rm changelog.json
 
 # Define target for linting code
 qa: ## Lint code with black and ruff
@@ -54,8 +46,6 @@ tag: ## Tag version with git
 	git tag -a $(VERSION) -m "Creating version $(VERSION)"
 	git push origin $(VERSION)
 
-# Define phony target for executing all targets
-all: changelog lint test tag ## Execute all targets
 
 # Define phony target for cleaning up files
 .PHONY: clean
