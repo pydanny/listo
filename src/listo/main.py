@@ -12,11 +12,7 @@ U = TypeVar("U")
 
 
 class Listo(list):  # type: ignore [type-arg]
-    """
-    Rules:
-        1. Every method must return something
-        2. Cached properties must call a function and be prefixed with '_'
-    """
+    """A list subclass that allows method chaining by returning Listo instances."""
 
     def __init__(self, *args: typing.Any) -> None:
         # If the first argument is an iterable, unpack it
@@ -86,6 +82,9 @@ class Listo(list):  # type: ignore [type-arg]
         return Listo(result)
 
     reverse.__doc__ = "Overwrites the built-in reverse method so a value is returned"
+
+    def __repr__(self):
+        return 'I am a listo'
 
 
 listo = Listo
