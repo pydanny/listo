@@ -87,6 +87,28 @@ def test_unique():
     assert lst.unique() == [1, 2, 3, 4]
 
 
+def test_sorted_returns_new_listo():
+    lst = listo(3, 1, 2)
+    result = lst.sorted()
+    assert isinstance(result, listo)
+    assert result == [1, 2, 3]
+    assert lst == [3, 1, 2]
+
+
+def test_sorted_with_key_and_reverse():
+    lst = listo("aa", "b", "ccc")
+    result = lst.sorted(key=len, reverse=True)
+    assert result == ["ccc", "aa", "b"]
+
+
+def test_sort_returns_new_listo():
+    lst = listo(3, 1, 2)
+    result = lst.sort()
+    assert isinstance(result, listo)
+    assert result == [1, 2, 3]
+    assert lst == [3, 1, 2]
+
+
 # def test_repr():
 #     lst = list(range(6))
 #     assert lst.__repr__() == "[0, 1, 2, 3, 4, 5]"

@@ -2,7 +2,7 @@ import collections
 import functools
 import random
 import typing
-from typing import TYPE_CHECKING, Callable, TypeVar
+from typing import TYPE_CHECKING, Any, Callable, Optional, TypeVar
 
 if TYPE_CHECKING:
     pass
@@ -82,6 +82,18 @@ class Listo(list):  # type: ignore [type-arg]
         return Listo(result)
 
     reverse.__doc__ = "Overwrites the built-in reverse method so a value is returned"
+
+    def sorted(
+        self, key: Optional[Callable[[T], Any]] = None, reverse: bool = False
+    ) -> "Listo[T]":
+        """Return a new sorted Listo."""
+        return Listo(sorted(self, key=key, reverse=reverse))
+
+    def sort(
+        self, key: Optional[Callable[[T], Any]] = None, reverse: bool = False
+    ) -> "Listo[T]":
+        """Return a new sorted Listo."""
+        return Listo(sorted(self, key=key, reverse=reverse))
 
     def __repr__(self):
         if self._length <= 6:
