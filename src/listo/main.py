@@ -59,6 +59,8 @@ class Listo(list):  # type: ignore [type-arg]
         # Overwrites the built-in reverse method so a value is returned
         return self[::-1]
 
+    reverse.__doc__ = "Overwrites the built-in reverse method so a value is returned"
+
     def shuffle(self) -> "Listo[T]":
         # Shuffles and returns the listo
         return random.sample(self, self._length)
@@ -80,8 +82,6 @@ class Listo(list):  # type: ignore [type-arg]
                 seen.add(item)
                 result.append(item)
         return Listo(result)
-
-    reverse.__doc__ = "Overwrites the built-in reverse method so a value is returned"
 
     def sorted(
         self, key: Optional[Callable[[T], Any]] = None, reverse: bool = False
