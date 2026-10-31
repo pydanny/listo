@@ -2,6 +2,7 @@ import collections
 import functools
 import random
 import typing
+from reprlib import recursive_repr
 from typing import TYPE_CHECKING, Any, Callable, Optional, TypeVar
 
 if TYPE_CHECKING:
@@ -95,9 +96,10 @@ class Listo(list):  # type: ignore [type-arg]
         """Return a new sorted Listo."""
         return Listo(sorted(self, key=key, reverse=reverse))
 
+    @recursive_repr()
     def __repr__(self):
         if self._length <= 6:
-            return f"{self._length} items: {self}"
+            return f"{self._length} items: {super().__repr__()}"
         return f"{self._length} items: {self[:5], ..., self[-1]}"
 
 
