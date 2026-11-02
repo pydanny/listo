@@ -1,5 +1,4 @@
 import collections
-import functools
 import random
 import typing
 from reprlib import recursive_repr
@@ -22,9 +21,9 @@ class Listo(list):  # type: ignore [type-arg]
         else:
             self.extend(list(args))
 
-    @functools.cached_property
+    @property
     def _length(self) -> int:
-        # Returns cached length of the listo
+        # Inherited list mutations must be reflected on every read.
         return len(self)
 
     def first(self) -> typing.Any:
