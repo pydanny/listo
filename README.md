@@ -2,9 +2,9 @@
 
 Listo is an enhanced version of the `list` type that aims to do the following:
 
-- Make behavior more consistent. No more methods with "in-place" changes. Every method call returns a value
+- Add convenience methods that return values. Some inherited `list` methods, such as `append`, still mutate the list in place and return `None`; methods such as `sort` and `reverse` are overridden to return a new value.
 - Adds methods that are missing from the `list` type. For example, `listo` has a `first` method that returns `self[0]`
-- A list of arguments passed in will be converted to a `listo` object, but a single argument that is an iterator will be unpacked into a `listo` object. This is useful for when you want to pass in a generator or other iterator into a function that expects a list
+- A list of arguments passed in will be converted to a `listo` object, but a single argument recognized by `collections.abc.Iterable` will be unpacked into a `listo` object. This is useful for when you want to pass in a generator or other iterator into a function that expects a list
 
 ## Usage
 
@@ -21,7 +21,7 @@ from listo import listo
 
 lst = listo(1, 2, 3)
 assert lst.first() == 1
-assert lst.last() == 2
+assert lst.last() == 3
 ```
 
 ### Usage: How listo handles initial arguments
